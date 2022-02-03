@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>설렉터</title>
+    <style>
+        /* 전부 다 적용 */
+        * {
+            color: greenyellow;
+        }
+
+        /* 태그 선택 */
+        h1 {
+            background-color: honeydew;
+        }
+
+        /* 클래스 선택 */
+        .lang {
+            font-size: 20px;
+        }
+
+        /* 아이디 선택 */
+        #Java {
+            background-color: blanchedalmond;
+        }
+
+        /* 자손 선택 */
+        #test > ul{
+            font-style: italic;
+        }
+
+        /* 자식 선택 */
+        #test > ul > ul{
+            background-color:cornsilk;
+        }
+
+        /* 인접 선택 */
+        #graduate + li{
+            color: blue;
+        }
+        /* #graduate ~ li{
+            color: blue;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h1>배우고 싶은 언어는?</h1>
+        <ul>
+            <li class="lang" id="Java">Java</li>
+            <li class="lang">Python</li>
+            <li class="lang">C++</li>
+        </ul>
+    </div>
+
+    <div id="test">
+        <h1>현재 학적 상태는?</h1>
+        <ul>
+            <li>졸업 예정</li>
+            <ul id="graduate">
+                <li>졸업 확정</li>
+                <li>졸업 유예</li>
+                <li>졸업 미정</li>
+            </ul>
+            <li>졸업</li>
+            <li>재학</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form 태그</title>
+</head>
+
+<body>
+    <!-- form 태그 -->
+    <!-- 사용자의 입력 값을 처리하기 위한 태그 -->
+    <!-- 화면에서 입력한 값을 서버에 전송 -->
+    <!-- action : 입력 값을 처리할 페이지 주소, 생략 시 자기 자신 페이지 -->
+    <!-- method : GET, POST 중 선택(기본값은 GET) -->
+    <!-- name : 프로그램에서 form 태그 접근 시 사용 -->
+    <!-- encType : 파일 업로드 시 multipart/form-data 값을 지정 -->
+    <!-- 파일 업로드는 POST 방식만 가능 -->
+    <!-- POST 방식 사용하는 경우 : 입력 내용이 많은 경우, 보안상 노출되면 안되는 경우 -->
+
+    <form action="" method="get" enctype="multipart/form-data">
+        <!-- input 태그 -->
+        <!-- text 타입 : 한 줄 입력받을 때 사용 -->
+        <!-- name : 서버에서 해당 input 값에 접근할 때 사용하는 키 -->
+        <!-- id : 해당 태그를 식별할 때 사용하는 키 -->
+        <!-- id는 중복 불가 -->
+        <!-- placeholder : 텍스트 박스에 기본으로 보이는 문구 -->
+        <!-- size : 입력 텍스트 창의 크기 지정 -->
+        <!-- disabled : 사용하지 않음, 서버에 전송 안됨 -->
+        <!-- readonly : 사용하지 않음, 서버에 전송은 가능 -->
+        <!-- autofocus : 자동으로 초점 맞춤 -->
+        <!-- value : 최초에 특정 값을 출력하게 하는 것 -->
+        <!-- maxlength : 입력 가능한 크기 지정 -->
+        id : <input type="text" name="id" id="" placeholder="아이디를 입력하세요." autofocus> <br>
+        password : <input type="password" name="password" id="" placeholder="비밀번호를 입력하세요." maxlength="13"> <br>
+
+        <!-- 사용자의 입력 값과 무관하게 서버로 보내야 하는 데이터가 있을 때 사용 -->
+        <input type="hidden" name="hidden" id="" value="test"> <br>
+
+        <!-- 서버로 전송하는 버튼 -->
+        <input type="submit" value="가입">
+        <!-- 초기화하는 버튼 -->
+        <input type="reset" value="다시 입력하기">
+    </form>
+
+</body>
+
+</html>
